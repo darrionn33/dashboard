@@ -136,7 +136,25 @@ header {
 }
 .greeting {
   grid-area: greeting;
-  background-color: green;
+  display: grid;
+  grid-template: 40px 40px / 80px 1fr;
+  grid-template-areas: "image hello" "image name";
+  gap: 10px;
+  color: #fff;
+  padding: 10px 20px;
+}
+.greeting > img {
+  width: 100%;
+  grid-area: image;
+  border-radius: 50%;
+  align-self: center;
+}
+.greeting > h4 {
+  grid-area: hello;
+  align-self: self-end;
+}
+.greeting > h2 {
+  grid-area: name;
 }
 .buttons {
   grid-area: buttons;
