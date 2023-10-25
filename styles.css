@@ -79,6 +79,47 @@ body {
 header {
   background-color: #005b41;
   grid-area: header;
+
+  display: grid;
+  grid-template: 1fr 2fr / 2fr 1fr;
+  grid-template-areas: "search profile" "greeting buttons";
+}
+.search {
+  grid-area: search;
+  fill: #fff;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 20px;
+}
+.search > svg {
+  width: 30px;
+  stroke: white;
+  stroke-width: 2px;
+  cursor: pointer;
+}
+.search-box {
+  flex: 1;
+  height: 60%;
+  background-color: #f0f0f0;
+  border-radius: 50px;
+  padding-left: 10px;
+}
+.search-box:focus {
+  outline: none;
+}
+.profile {
+  grid-area: profile;
+  background-color: #ff4b4b;
+}
+.greeting {
+  grid-area: greeting;
+  background-color: green;
+}
+.buttons {
+  grid-area: buttons;
+  background-color: #630000;
 }
 main {
   grid-area: main;
