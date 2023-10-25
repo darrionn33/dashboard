@@ -194,6 +194,8 @@ main {
   grid-template-areas: "projects announcements" "projects trending";
   color: white;
   padding: 20px;
+  padding-bottom: 0px;
+  gap: 10px;
 }
 .projects-container {
   grid-area: projects;
@@ -203,11 +205,15 @@ main {
 }
 .trending-container {
   grid-area: trending;
+}
+.announcements-container,
+.trending-container {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.trending {
+.trending,
+.announcements {
   display: flex;
   flex-direction: column;
   background-color: #008170;
@@ -221,6 +227,9 @@ main {
   grid-template-areas: "image name" "image username";
   align-items: end;
   gap: 2px 10px;
+  padding: 10px;
+}
+.announcements > div {
   padding: 10px;
   border-bottom: 1px solid;
 }
@@ -238,4 +247,8 @@ main {
   align-self: self-start;
   color: gainsboro;
   font-size: small;
+}
+.announcements > div > h4 {
+  margin-bottom: 5px;
+  font-size: large;
 }
